@@ -108,7 +108,7 @@ func Set(opts ...Option) (func(), error) {
 	}
 
 	if status == iruntime.CPUQuotaUndefined {
-		cfg.log("maxprocs: Leaving GOMAXPROCS=%v: CPU quota undefined", currentMaxProcs())
+		cfg.log("maxprocs: Leaving GOMAXPROCS=%v", currentMaxProcs())
 		return undoNoop, nil
 	}
 
